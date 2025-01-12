@@ -26,20 +26,19 @@ kotlin {
     }
     
     sourceSets {
-
         androidMain.dependencies {
-            implementation(compose.preview)
+            implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
-            implementation(compose.runtime)
+            implementation(libs.kotlinx.datetime)
             implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
+            implementation(compose.material3)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.androidx.lifecycle.viewmodel.compose)
+            implementation(libs.androidx.navigation.compose)
         }
     }
 }
@@ -69,9 +68,8 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-}
-
-dependencies {
-    debugImplementation(compose.uiTooling)
+    dependencies {
+        debugImplementation(libs.compose.ui.tooling)
+    }
 }
 
