@@ -1,6 +1,5 @@
 rootProject.name = "ChinEats"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
-
 pluginManagement {
     repositories {
         google {
@@ -14,7 +13,6 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-
 dependencyResolutionManagement {
     repositories {
         google {
@@ -27,5 +25,4 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
 include(":composeApp")
