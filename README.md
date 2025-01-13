@@ -1,7 +1,11 @@
 This is a Kotlin Multiplatform project targeting Android, iOS.
 
 ### Completed Tasks: 
-- navigations 
+- navigations: 
+
+| ![iOS](https://github.com/user-attachments/assets/106c95d7-8879-4bb6-86a5-1b19c10a096d) | ![Android](https://github.com/user-attachments/assets/ff2a7c4c-2481-4718-a0eb-488428f0f462)) |
+|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+
 
 
 ### Mockups: 
