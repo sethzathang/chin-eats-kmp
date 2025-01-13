@@ -11,21 +11,23 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 
 /**
+ * Common App Bar
+ *
  * @param pageTitle
- * @param backNavController - only pass in if you need to navigate back
+ * @param navController - only pass in if you need to navigate back
  */
 @Composable
 fun ChinEatAppBar(
     pageTitle: String,
-    backNavController: NavHostController? = null
+    navController: NavHostController? = null
 ) {
-    if (backNavController != null) {
+    if (navController != null) {
         TopAppBar(
             title = { Text(text = pageTitle) },
             backgroundColor = MaterialTheme.colors.background,
             navigationIcon = {
                 IconButton(
-                    onClick = { backNavController.popBackStack() },
+                    onClick = { navController.popBackStack() },
                     content = {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
