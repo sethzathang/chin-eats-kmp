@@ -27,12 +27,12 @@ import com.chineats.presentation.screens.settings.SettingsScreen
 @Composable
 fun App() {
     CupcakeTheme {
-        CupcakeApp()
+        ChinEatsApp()
     }
 }
 
 @Composable
-fun CupcakeApp() {
+fun ChinEatsApp() {
     val navController = rememberNavController()
     Scaffold(
         bottomBar = { ChinEatBottomNavBar(navController) },
