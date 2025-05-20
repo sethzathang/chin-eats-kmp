@@ -34,10 +34,10 @@ private val DarkColors = darkColorScheme(
 
 @Composable
 fun ChinEatsTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    useDarkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if (darkTheme) DarkColors else LightColors
+    val colorScheme = if (useDarkTheme) DarkColors else LightColors
     MaterialTheme(
         colorScheme = colorScheme,
         content = content
