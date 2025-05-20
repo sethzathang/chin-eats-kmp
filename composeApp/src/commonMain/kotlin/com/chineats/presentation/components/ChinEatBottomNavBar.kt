@@ -1,15 +1,18 @@
 package com.chineats.presentation.components
 
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.chineats.Screen
+import com.chineats.common.md_theme_dark_background
+import com.chineats.common.md_theme_light_background
 
 @Composable
 fun currentRoute(navController: NavHostController): String? {
@@ -20,13 +23,15 @@ fun currentRoute(navController: NavHostController): String? {
 @Composable
 fun ChinEatBottomNavBar(navController: NavHostController) {
     val items = listOf(Screen.Home, Screen.Search, Screen.Favorite, Screen.Settings)
-    BottomNavigation(
-        backgroundColor = MaterialTheme.colors.background
+    val currentRoute = currentRoute(navController)
+    NavigationBar(
+        containerColor = if (isSystemInDarkTheme()) md_theme_dark_background else md_theme_light_background
     ) {
         items.forEach { screen ->
-            BottomNavigationItem(
+            NavigationBarItem(
                 icon = { Icon(screen.icon, contentDescription = screen.route) },
-                selected = currentRoute(navController)?.startsWith(screen.route) == true,
+                label = { Text(screen.route.replaceFirstChar { it.uppercase() }) },
+                selected = currentRoute?.startsWith(screen.route) == true,
                 onClick = {
                     navController.navigate(screen.route) {
                         navController.graph.findStartDestination().route?.let {
@@ -35,7 +40,8 @@ fun ChinEatBottomNavBar(navController: NavHostController) {
                         launchSingleTop = true
                         restoreState = true
                     }
-                }
+                },
+                alwaysShowLabel = false // Only show label for selected item, Material 3 style
             )
         }
     }

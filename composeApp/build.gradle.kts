@@ -34,15 +34,14 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material)
-            //implementation(compose.material3)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
-
+            implementation(compose.material3)
             implementation(libs.kotlinx.datetime)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.androidx.lifecycle.viewmodel.compose)
             implementation(libs.androidx.navigation.compose)
+            implementation(libs.image.loader)
         }
     }
 }

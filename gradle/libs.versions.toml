@@ -1,17 +1,20 @@
 [versions]
 agp = "8.5.2"
-android-compileSdk = "34"
+android-compileSdk = "35"
 android-minSdk = "24"
-android-targetSdk = "34"
-androidx-activity = "1.9.3"
+android-targetSdk = "35"
+
+androidx-activity = "1.10.1"
 androidx-lifecycle = "2.8.4"
 androidx-navigation = "2.7.0-alpha06"
-compose-android = "1.7.6"
+compose-android = "1.8.1"
 compose-multiplatform = "1.7.0"
+imageLoader = "1.4.0"
 kotlin = "2.1.0"
 kotlinx-datetime = "0.6.0"
 
 [libraries]
+image-loader = { module = "io.github.qdsfdhvh:image-loader", version.ref = "imageLoader" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
 androidx-lifecycle-runtime-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }

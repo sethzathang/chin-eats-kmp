@@ -1,11 +1,11 @@
 package com.chineats.presentation.screens.home
 
-import androidx.compose.material.Button
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import com.chineats.Screen
 import com.chineats.presentation.components.ChinEatContent
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
 
 @Composable
 fun HomeScreen(navController: NavHostController) {

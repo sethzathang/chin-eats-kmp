@@ -1,18 +1,18 @@
 package com.chineats.presentation.screens.settings
 
-import androidx.compose.material.Button
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import com.chineats.Screen
 import com.chineats.presentation.components.ChinEatContent
+import androidx.compose.material3.Button as Material3Button
+import androidx.compose.material3.Text as Material3Text
 
 @Composable
 fun SettingsScreen(navController: NavHostController) {
     ChinEatContent(pageTitle = "Settings") {
-        Button(
+        Material3Button(
             onClick = { navController.navigate(Screen.HomeDetail.route) },
-            content =  { Text(text = "Go to Settings Detail") }
+            content =  { Material3Text(text = "Go to Settings Detail") }
         )
     }
 }
@@ -20,6 +20,6 @@ fun SettingsScreen(navController: NavHostController) {
 @Composable
 fun SettingsDetailScreen(navController: NavHostController) {
     ChinEatContent(pageTitle = "Settings Details", navController = navController) {
-        Text(text = "Settings Detail Screen")
+        Material3Text(text = "Settings Detail Screen")
     }
 }

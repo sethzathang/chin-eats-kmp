@@ -1,18 +1,18 @@
 package com.chineats
 
-import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.chineats.common.CupcakeTheme
+import com.chineats.common.ChinEatsTheme
 import com.chineats.presentation.components.ChinEatBottomNavBar
 import com.chineats.presentation.screens.favorite.FavoriteScreen
 import com.chineats.presentation.screens.home.HomeDetailScreen
@@ -26,7 +26,7 @@ import com.chineats.presentation.screens.settings.SettingsScreen
  */
 @Composable
 fun App() {
-    CupcakeTheme {
+    ChinEatsTheme {
         ChinEatsApp()
     }
 }
